@@ -1,0 +1,87 @@
+/* Общие стили */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+h1, p {
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+button {
+  background: linear-gradient(to right, #ff6b81, #ff4757);
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+button:hover {
+  background: linear-gradient(to right, #ff4757, #ff6b81);
+  transform: scale(1.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Финальный цветок */
+#flower {
+  width: 0;
+  height: 0;
+  background-image: url('images.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin: 20px auto;
+  animation: growFlower 4s ease-in-out forwards;
+}
+
+@keyframes growFlower {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    opacity: 1;
+  }
+}
+
+/* Эффект "Бум" */
+#boom-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 100px;
+  color: rgba(255, 0, 0, 0.8);
+  transform: translate(-50%, -50%);
+  animation: boom 0.8s ease-in-out forwards;
+}
+
+@keyframes boom {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translate(-50%, -50%);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5) translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5) translate(-50%, -50%);
+  }
+}
